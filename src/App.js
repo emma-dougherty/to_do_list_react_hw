@@ -54,16 +54,16 @@ function App() {
         value={newToDo}/>
 
 
-      
+      <label className='form-control'>
         <input type="radio" name="something" value="high" onChange={handlePriorityInput}/>
-        <label for="high priority">high priority</label>
+        <label for="high">high</label>
         <input type="radio" name="something" value="low" onChange={handlePriorityInput}/>
-        <label for="low priority">low priority</label>
+        <label for="low">low</label>
+    
+        </label>
     
 
-    
-
-        <input type="submit" value="Save New To Do" />
+        <input type="submit" value="Save" />
       </form>
     </div>
 

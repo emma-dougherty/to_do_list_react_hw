@@ -1,7 +1,7 @@
 .App {
   width: 60%;
   margin: 0 auto;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 ul {
@@ -16,27 +16,15 @@ li {
   justify-content: space-between;
 }
 li span {
-  padding: 8px;
+  padding: 2px;
 }
-li button {
-  background: #f2640c;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-li button :hover {
-  background: #f2c40c;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
+
 
 li.high {
   border: 2px solid #ff0090;
-  color: #1a681e;
+  color: #000000;
 }
+
 li.low {
   border: 2px solid #7e7e7e;
 }
@@ -62,22 +50,35 @@ h1 {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    box-shadow: -10px 15px 0px #000000cf;
 }
 
 input[type=submit] {
   background-color:#ff0090;
   border-radius:42px;
-  border:3px solid #000000;
-  display:inline-block;
-  /* cursor:pointer; */
+  border:2px solid #000000;
   color:#000000;
-  font-family:Verdana;
-  font-size:26px;
-  padding:16px 31px;
+  font-size:16px;
+  padding:10px 20px;
+  margin: 10px;
   text-decoration:none;
-  text-shadow:0px px 0px #000000;
-  box-shadow: -10px 15px 0px rgba(0,0,0,.81);
-  display: flex;
-  justify-content: center;
+  /* text-shadow:0px px 0px #000000; */
+  /* box-shadow: -10px 15px 0px rgba(0,0,0,.81); */
 }
+input[type=submit]:hover {
+  background-color:#3DD1E7;
+  border-radius:42px;
+  border:2px solid #000000;
+  color:#000000;
+  font-size:16px;
+  padding:10px 20px;
+  margin: 10px;
+  text-decoration:none;
+  /* text-shadow:0px px 0px #000000; */
+  /* box-shadow: -5px 10px 0px rgba(0,0,0,.81); */
+}
+
+input[name="something"] {
+	accent-color: #3DD1E7;
+}
+
+
