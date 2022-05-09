@@ -4,27 +4,28 @@ import React, {useState} from 'react';
 function App() {
   
     const [todos, setToDos] = useState ([
-      { name: "Buy Shopping", isCompleted: false, isPriority: "high" },
-      { name: "Clean Bathroom", isCompleted: true, isPriority: "low" },
-      { name: "Car's MOT", isCompleted: false, isPriority: "high"}
+      { name: "Buy Shopping", priority: "high" },
+      { name: "Clean Bathroom", priority: "low" },
+      { name: "Car's MOT", priority: "high"}
     ])
     const [newToDo, setNewToDo] = useState("")
+    const [newPriority, setNewPriority] = useState ("")
 
     const itemNodes = todos.map((todo, index) => {
       return(
-          <li key={index} className={todo.isComplete ? "completed" : "not-completed"}>
-          <span>{todo.name}</span> 
-  
-          {todo.isPriority ? "high" : "low"}
+          <li key={index} className={todo.priority === "high" ? "high" : "low"}>
 
-          {todo.isCompleted ? <span className="completed">Completed!</span> : <button onClick={() => completeToDo(index)}>Complete</button>}</li>
+          <span>{todo.name}</span> 
+          <span>{todo.priority}</span> 
+  </li>
       )
     })
-    const completeToDo = ((index) => {
-      const copyToDos = [... todos]
-      copyToDos[index].isCompleted = true
-      setToDos(copyToDos)
-    })
+  
+
+    const handlePriorityInput = (event) => {
+      setNewPriority(event.target.value)
+    }
+
     const handleToDoInput = (event) => {
       setNewToDo(event.target.value)
     }
@@ -33,7 +34,7 @@ function App() {
 
     const saveNewToDo = ((event) => {
       event.preventDefault()
-      const copyToDos = [... todos, ({name: newToDo, isCompleted: false, isPriority: "low"})]
+      const copyToDos = [... todos, ({name: newToDo, isPriority: newPriority})]
       
       setToDos(copyToDos)
       setNewToDo("")
@@ -51,6 +52,14 @@ function App() {
         <input id="new-todo" 
         type="text" onChange={handleToDoInput} 
         value={newToDo}/>
+
+
+      
+        <input type="radio" name="something" value="high" onChange={handlePriorityInput}/>
+        <label for="high priority">high priority</label>
+        <input type="radio" name="something" value="low" onChange={handlePriorityInput}/>
+        <label for="low priority">low priority</label>
+    
 
     
 

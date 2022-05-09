@@ -33,12 +33,12 @@ li button :hover {
   cursor: pointer;
 }
 
-li.completed {
-  border: 2px solid #1a681e;
+li.high {
+  border: 2px solid #ff0090;
   color: #1a681e;
 }
-li.not-completed {
-  border: 2px solid #f2360c;
+li.low {
+  border: 2px solid #7e7e7e;
 }
 input[type="text"] {
   padding: 10px;
@@ -67,17 +67,17 @@ h1 {
 
 input[type=submit] {
   background-color:#ff0090;
-border-radius:42px;
-border:3px solid #000000;
-display:inline-block;
-/* cursor:pointer; */
-color:#000000;
-font-family:Verdana;
-font-size:26px;
-padding:16px 31px;
-text-decoration:none;
-text-shadow:0px px 0px #000000;
-box-shadow: -10px 15px 0px rgba(0,0,0,.81);
-display: flex;
-justify-content: center;
+  border-radius:42px;
+  border:3px solid #000000;
+  display:inline-block;
+  /* cursor:pointer; */
+  color:#000000;
+  font-family:Verdana;
+  font-size:26px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px px 0px #000000;
+  box-shadow: -10px 15px 0px rgba(0,0,0,.81);
+  display: flex;
+  justify-content: center;
 }
