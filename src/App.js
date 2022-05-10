@@ -30,14 +30,14 @@ function App() {
       setNewToDo(event.target.value)
     }
 
-    
 
     const saveNewToDo = ((event) => {
       event.preventDefault()
-      const copyToDos = [... todos, ({name: newToDo, isPriority: newPriority})]
+      const copyToDos = [... todos, ({name: newToDo, priority: newPriority})]
       
       setToDos(copyToDos)
       setNewToDo("")
+      setNewPriority("")
     })
 
     return (
